@@ -1,0 +1,16 @@
+{
+    "name": "basicpalkovic/basicQuizz",
+    "description": "A basic quizz application",
+    "authors": [
+        {
+            "name": "Luka Basic Palkovic",
+            "email": "baesic016@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "Framework/",
+            "App\\": "App/"
+        }
+    }
+}
