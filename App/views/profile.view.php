@@ -8,15 +8,11 @@ loadPartial('navbar');
 ?>
 
 <section class="mt-huge">
-    This is the home page
+    This is the profile page
 </section>
 
 <h1>Hello</h1>
 
-<form action="/game/options" method="GET">
-    <button type="submit">Start Game</button>
-
-</form>
 
 <?php
 

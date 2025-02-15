@@ -6,31 +6,31 @@ use Framework\Session;
 
 
 <!-- Nav -->
-<header class="bg-blue-900 text-white p-4">
-    <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-3xl font-semibold">
-            <a href="/">Quizzler</a>
-        </h1>
-        <nav class="space-x-4">
-            <?php if (!Session::has('user')): ?>
-                <a href="/auth/login" class="text-white hover:underline">Login</a>
-                <a href="/auth/register" class="text-white hover:underline">Register</a>
-
-            <?php else: ?>
-                <div class="flex justify-between items-center gap-4">
-                    <div>Welcome <?= Session::get('user')['username'] ?></div>
-                    <form type="submit" method="POST" action="/auth/logout">
-                        <button class="text-white inline hover:underline">Logout</button>
-                    </form>
-
-
-
-                </div>
+<header>
+    <h1>
+        <a href="/">BasicQuizz</a>
+    </h1>
+    <nav>
+        <?php if (!Session::has('user')): ?>
+            <div class="profile-item-holder">
+                <a href="/auth/login">Login</a>
+                <a href="/auth/register">Register</a>
+            </div>
+        <?php else: ?>
+            <div class="profile-item-holder">
+                <a href="/profile">Profile</a>
+                <form type="submit" method="POST" action="/auth/logout">
+                    <button>Logout</button>
+                </form>
 
 
-            <?php endif; ?>
+
+            </div>
 
 
-        </nav>
-    </div>
+        <?php endif; ?>
+
+
+    </nav>
+
 </header>

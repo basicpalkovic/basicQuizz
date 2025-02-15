@@ -8,10 +8,12 @@ class HomeController
 {
 
     protected $db;
+    protected $data;
     public function __construct()
     {
         $config = require basePath('config/db.php');
         $this->db = new Database($config);
+
 
     }
 
@@ -20,6 +22,27 @@ class HomeController
 
 
         loadView('home');
+
+    }
+
+    public function profile()
+    {
+
+
+        loadView('profile');
+
+    }
+
+    public function test()
+    {
+
+
+
+        loadView('home', ['data' => $this->data]);
+
+
+
+
 
     }
 }

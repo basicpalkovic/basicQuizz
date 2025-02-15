@@ -1,5 +1,5 @@
 {
-    "name": "basicpalkovic/basicQuizz",
+    "name": "basicpalkovic/basic_quizz",
     "description": "A basic quizz application",
     "authors": [
         {
@@ -12,5 +12,8 @@
             "Framework\\": "Framework/",
             "App\\": "App/"
         }
+    },
+    "require": {
+        "twbs/bootstrap": "5.0.2"
     }
 }
